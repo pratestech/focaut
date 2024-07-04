@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--Link's-->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/7148/7148801.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -35,8 +35,8 @@
                     <li class="nav-item"><a href="#hero" id="hero-header" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="#about" id="about-header" class="nav-link">Sobre</a></li>
                     <li class="nav-item"><a href="#causes" id="causes-header" class="nav-link">Causa</a></li>
-                    <li class="nav-item"><a href="#levels" id="levels-header" class="nav-link">Niveis</a></li>
-                    <li class="nav-item"><a href="#relates" id="relates-header" class="nav-link">Relatos</a></li>
+                    <li class="nav-item"><a href="#wrapper" id="levels-header" class="nav-link">Niveis</a></li>
+                    <li class="nav-item"><a href="relates.html" id="relates-header" class="nav-link">Relatos</a></li>
                 </ul>
             </div>
             <div class="login-button">
@@ -53,7 +53,7 @@
                 <li class="nav-item"><a href="#hero" id="hero-header" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="#about" id="about-header" class="nav-link">Sobre</a></li>
                 <li class="nav-item"><a href="#causes" id="causes-header" class="nav-link">Causa</a></li>
-                <li class="nav-item"><a href="#levels" id="levels-header" class="nav-link">Niveis</a></li>
+                <li class="nav-item"><a href="#wrapper" id="levels-header" class="nav-link">Niveis</a></li>
                 <li class="nav-item"><a href="#relates" id="relates-header" class="nav-link">Relatos</a></li>
             </ul>
             <div class="login-button">
@@ -158,48 +158,57 @@
             </div>
         </section><!--Fim Causes-->
 
+        <div class="wave2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ececec" fill-opacity="1" d="M0,192L80,165.3C160,139,320,85,480,74.7C640,64,
+                800,96,960,117.3C1120,139,1280,149,1360,154.7L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+        </div>
+
         <section id="levels" class="levels">
-            <div class="wave2">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ececec" fill-opacity="1" d="M0,192L80,165.3C160,139,320,85,480,74.7C640,64,
-                    800,96,960,117.3C1120,139,1280,149,1360,154.7L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
-            </div>
-            <h1>Graus</h1>
-            <div class="wrapper">
-                <div class="container-levels">
-                    <input type="radio" name="slide" id="c1" checked>
-                    <label for="c1" class="card">
-                            <div class="row">
-                                <div class="icon">G1</div>
-                                <div class="description">
-                                    <p>dificuldade para se comunicar, mas não é limitante
-                                        para interações sociais.</p>
+            <div class="container-levels">
+                <h1>Graus</h1>
+                <p>O TEA é classificado em diferentes níveis, baseados na intensidade dos sintomas e na necessidade de suporte.</p><br>
+                <p>O Transtorno do Espectro Autista (TEA) é uma condição complexa que afeta o desenvolvimento social, a comunicação e o 
+                    comportamento. Uma das maneiras de entender melhor o TEA é através da classificação em diferentes níveis, baseados na 
+                    intensidade dos sintomas e na necessidade de suporte. No contexto atual, com base nas diretrizes do DSM-5 (Manual Diagnóstico 
+                    e Estatístico de Transtornos Mentais), o autismo é dividido em três níveis: leve, moderado e severo.
+                </p>
+                <div id="wrapper">
+                        <div class="container">
+                            <input type="radio" name="slide" id="c1" checked>
+                            <label for="c1" class="card">
+                                    <div class="row">
+                                        <div class="icon">G1</div>
+                                        <div class="description">
+                                            <p>dificuldade para se comunicar, mas não é limitante
+                                                para interações sociais.</p>
+                                        </div>
+                                    </div>
+                            </label>
+                            <input type="radio" name="slide" id="c2" >
+                            <label for="c2" class="card">
+                                <div class="row">
+                                    <div class="icon">G2</div>
+                                    <div class="description">
+                                        <p>Semelhante às características descritas no nível 3, 
+                                            mas com menor intensidade no que cabe aos transtornos 
+                                            de comunicação e deficiência de linguagem.</p>
+                                    </div>
                                 </div>
-                            </div>
-                    </label>
-                    <input type="radio" name="slide" id="c2" >
-                    <label for="c2" class="card">
-                        <div class="row">
-                            <div class="icon">G2</div>
-                            <div class="description">
-                                <p>Semelhante às características descritas no nível 3, 
-                                    mas com menor intensidade no que cabe aos transtornos 
-                                    de comunicação e deficiência de linguagem.</p>
-                            </div>
+                            </label>
+                            <input type="radio" name="slide" id="c3" >
+                            <label for="c3" class="card">
+                                <div class="row">
+                                    <div class="icon">G3</div>
+                                    <div class="description">
+                                        <p>Apresentam déficit na comunicação verbal e não verbal
+                                            . Ou seja, não conseguem se comunicar sem suporte
+                                            além de apresentar dificuldade na interação social
+                                            e cognição reduzida.</p>
+                                    </div>
+                                </div>
+                            </label>
+                            <input type="radio" name="slide" id="c4" >
                         </div>
-                    </label>
-                    <input type="radio" name="slide" id="c3" >
-                    <label for="c3" class="card">
-                        <div class="row">
-                            <div class="icon">G3</div>
-                            <div class="description">
-                                <p>Apresentam déficit na comunicação verbal e não verbal
-                                    . Ou seja, não conseguem se comunicar sem suporte
-                                    além de apresentar dificuldade na interação social
-                                    e cognição reduzida.</p>
-                            </div>
-                        </div>
-                    </label>
-                    <input type="radio" name="slide" id="c4" >
                 </div>
             </div>
         </section><!--Fim Levels-->

@@ -5,15 +5,21 @@ about.addEventListener('click', () =>{
     window.scroll({top: 610, behavior: "smooth"})
 })
 
-const portifolio = document.querySelector('#causes');
+const causes = document.querySelector('#causes');
 
-portifolio.addEventListener('click', () =>{
+causes.addEventListener('click', () =>{
     window.scroll({top: 610, behavior: "smooth"})
 })
 
-const contato = document.querySelector('#levels');
+const levels = document.querySelector('#levels');
 
-contato.addEventListener('click', () =>{
+levels.addEventListener('click', () =>{
+    window.scroll({top: 610, behavior: "smooth"})
+})
+
+const wrapper = document.querySelector('#wrapper');
+
+wrapper.addEventListener('click', () =>{
     window.scroll({top: 610, behavior: "smooth"})
 })
 
