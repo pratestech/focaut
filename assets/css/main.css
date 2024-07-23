@@ -13,7 +13,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
 /* Background's */
@@ -235,8 +234,12 @@ a {
 
 #hero-header {
     color: #7a7a76;
-    transition: 0.5s;
     font-family: 'chubby';
+}
+
+#hero-header:hover {
+    color: #2c2828;
+    transition: 0.5s;
 }
 
 #about-header {
@@ -252,10 +255,6 @@ a {
 #levels-header {
     color: rgb(236, 66, 66);
     font-family: 'chubby';
-}
-
-#hero-header:hover {
-    color: #2c2828;
 }
 
 /* Hero Section */
@@ -315,7 +314,7 @@ a {
 .hero-text p {
     margin: 5px 50% 30px 0;
     text-align: justify;
-    font-size: 16px;
+    font-size: 21px;
     font-weight: 400;
     color: #fff;
 }
@@ -512,7 +511,7 @@ a {
     height: 3px;
     background: #e61313;
     margin-bottom: 9px;
-    margin-left: 625px;
+    margin-left: 685px;
     bottom: 0;
 }
 
@@ -526,6 +525,7 @@ a {
     text-indent: 20px;
     margin: 0 20px 0 20px;
     color: #fff;
+    font-size: 19px;
 }
 
 .wave2 {
@@ -536,11 +536,13 @@ a {
     margin-top: -60px;
 }
 
+/* Cards */
 #wrapper {
     width: 100%;
     margin-top: 50px;
     display: flex;
     align-items: center;
+    margin-bottom: 90px;
     justify-content: center;
 }
 
@@ -638,4 +640,166 @@ input:checked + label .description {
     background: url('https://imom.com.br/wp-content/uploads/elementor/thumbs/lancamento-5-pjasjiab42eh9ud2kznpzggytuvlzqoufsm1atnrko.png') center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    color: #000000;
+    bottom: 0;
+}
+
+footer h3 {
+    color: white;
+}
+
+.footer-link {
+    text-decoration: none;
+}
+
+#footer_content {
+    background: #23232e;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 3.5rem;
+}
+
+#footer_content h3 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+#footer_content p {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+#footer_social_media {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    color: #fff;
+}
+
+#footer_social_media::before {
+    content: "";
+    position: absolute;
+    z-index: 99999;
+    display: block;
+    background: #3eabef;
+    width: 185px;
+    height: 2px;
+    margin-bottom: -2760px;
+    bottom: 0;
+}
+
+#footer_social_media .footer-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: #fff;
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+#footer_social_media .footer-link i{
+    font-size: 1.25rem;
+} 
+
+#footer_social_media .footer-link:hover{
+    opacity: .8;
+   transform: scale(1.08);
+   transition: 0.8s;
+}
+
+#instagram{
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#youtube{
+    background-color: #f12424;
+}
+
+#twitter{
+   background-color: black; 
+}
+
+.footer-list{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+}
+
+.footer-list .footer-link {
+    color: #fff;
+    transition: all 0.4s;
+}
+
+.footer-list .footer-link:hover {
+    color: #7f37c9;
+}
+
+#footer_subscribe{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem ;
+}
+
+#input_group{
+    display: flex;
+    margin-top: 23px;
+    background-color: #252323;
+    border: 1px solid #000;
+    border-radius: 4px;
+}
+
+#input_group input {
+    all: unset;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+#input_group button {
+    background-color: #7f37c9;
+    border: none;
+    color: #ececec;
+    padding: 0px 1.25rem;
+    font-size: 1.125rem;
+    height: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.4s;
+    margin-right: 8px;
+    margin-top: 10px;
+}
+
+#input_group button:hover {
+    opacity: 0.8;
+}
+
+#footer_copyright{
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+    color: #ececec;
+}
+
+@media screen and (max-width: 768px) {
+    #footer_content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    #footer_content {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 3rem 2rem;
+    }
 }
