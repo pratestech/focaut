@@ -18,33 +18,38 @@
 </head>
     <style>
         @font-face {
-            font-family: 'chubby';
-            src: url('../font/CHUBBY.TTF') format('truetype');
+            font-family: 'menuFont';
+            src: url('./assets/font/Baloo2-Bold.ttf');
         }
         
         .nav-list li a{
-            font-family: 'chubby';
+            font-family: 'menuFont';
         }
     </style>
 <body>
     <header id="header" class="header">
         <nav class="nav-bar">
-            <a class="logo" href="index.html"><h1>focaut</h1></a>
-            <div class="nav-list">
-                <ul>
-                    <li class="nav-item"><a href="#hero" id="hero-header" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="#about" id="about-header" class="nav-link">Sobre</a></li>
-                    <li class="nav-item"><a href="#causes" id="causes-header" class="nav-link">Causa</a></li>
-                    <li class="nav-item"><a href="#wrapper" id="levels-header" class="nav-link">Niveis</a></li>
-                    <li class="nav-item"><a href="relates.html" id="relates-header" class="nav-link">Relatos</a></li>
-                </ul>
+            <div class="logo">
+                <a href="index.html"><h1>focaut<span style="color: red;">.</span></h1></a>
             </div>
-            <div class="login-button">
-                <button><a href="#">Contato</a></button>
+
+            <div class="right">
+                <div class="nav-list">
+                    <ul>
+                        <li class="nav-item"><a href="#about" id="about-header" class="nav-link">Sobre</a></li>
+                        <li class="nav-item"><a href="#causes" id="causes-header" class="nav-link">Causa</a></li>
+                        <li class="nav-item"><a href="#wrapper" id="levels-header" class="nav-link">Niveis</a></li>
+                        <li class="nav-item"><a href="relates.html" id="relates-header" class="nav-link">Relatos</a></li>
+                    </ul>
+                </div>
+    
+                <div class="login-button">
+                    <button><a href="#">Contato</a></button>
+                </div>
             </div>
 
             <div class="mobile-menu-icon">
-                <button onclick="menuShow()"><img class="icon" src="assets/img/menu_white_36dp.svg" alt=""></button>
+                <button onclick="menuShow()"><img class="icon" src="assets/img/menu_33dp_E8EAED_FILL0_wght400_GRAD0_opsz40.svg" alt=""></button>
             </div>
         </nav>
         
@@ -68,15 +73,14 @@
                 <div class="hero-text">
                   <h1>Focaut</h1>
                   <p>
-                    Bem-vindo ao nosso projeto dedicado ao autismo, onde cada detalhe é pensado para celebrar a singularidade e a diversidade das pessoas no espectro. 
-                    Aqui, acreditamos que cada indivíduo possui talentos e habilidades únicas que merecem ser reconhecidas e valorizadas.
+                    Informação Sobre o Mundo Autista
                   </p>
                 </div>
                 <div class="more-button">
                     <button>Ver Mais</button>
                 </div>
             </div>
-        </section><!--Fim Hero-->
+        </section><!--End Hero-->
 
         <section id="about" class="about">
             <div class="container-about">
@@ -102,12 +106,7 @@
                     </ul>
                 </div>
             </div>
-        </section><!--Fim About-->
-
-        <div class="wave1">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ececec" fill-opacity="1" d="M0,160L80,176C160,192,320,224,480,240C640,256,
-                800,256,960,213.3C1120,171,1280,85,1360,42.7L1440,0L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
-        </div>
+        </section><!--End About-->
 
         <section id="causes" class="causes">
             <div class="container-causes">
@@ -156,12 +155,7 @@
                         </p>
                     </div>
             </div>
-        </section><!--Fim Causes-->
-
-        <div class="wave2">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ececec" fill-opacity="1" d="M0,192L80,165.3C160,139,320,85,480,74.7C640,64,
-                800,96,960,117.3C1120,139,1280,149,1360,154.7L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
-        </div>
+        </section><!--End Causes-->
 
         <section id="levels" class="levels">
             <div class="container-levels">
@@ -211,7 +205,7 @@
                         </div>
                 </div>
             </div>
-        </section><!--Fim Levels-->
+        </section><!--End Levels-->
     </main><!--End Main--> 
 
     <footer>
@@ -283,7 +277,7 @@
             &#169
             2024 all rights reserved  
         </div>
-    </footer>
+    </footer><!--End Footer--> 
 
     <section id="Vlibras">
         <div vw class="enabled">
@@ -293,6 +287,9 @@
         </div>
         </div>
         <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
     </section><!--End VLibras-->
 </body>
 </html>
