@@ -73,52 +73,67 @@ a {
 .nav-bar {
     display: flex;
     justify-content: space-around;
-    padding: 1.5rem 6rem;
+    align-items: center;
+    padding: 8px;
     position: fixed;
     width: 100%;
     z-index: 996;
-    color: #000000;
-    background: #ffffffdc;
-    padding: 20px 0;
-    transition: all 0.5s;
-    box-shadow: 0 0 8px #8a8686;
+    background: #ffffffec;
 }
 
-.logo {
+.logo a{
     color: #706868;
     font-size: 19px;
     margin: 5px 0;
     text-decoration: none;
 }
 
-.nav-list {
+.right {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    gap: 90px;
 }
 
 .nav-list ul {
     display: flex;
-    justify-content: center;
+    justify-content:center;
+    align-items: center;
+    text-align: right;
     list-style: none;
 }
 
-.nav-item {
-    margin: 0 15px;
+.nav-item:not(:last-child) {
+    margin-right: 50px;
 }
 
 .nav-link {
     text-decoration: none;
-    font-size: 1.15rem;
+    font-size: 20px;
     color: #000000;
     cursor: pointer;
-    font-weight: 700;
-    font-family: 'chubby';
+    font-family: 'menuFont';
+}
+
+.nav-item a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    height: 2px;
+    width: 0%;
+    transition: .8s ease-in-out;
+}
+
+.nav-item a:hover::after {
+    width: 100%;
 }
 
 .login-button button {
     border: none;
-    width: 100px;
+    width: 130px;
+    height: 50px;
     padding: 10px;
     border-radius: 50px;
     background-color: #0187a7;
@@ -161,30 +176,6 @@ a {
     .nav-item {
         display: none;
     }
-    #hero-header {
-        color: #7a7a76;
-        transition: 0.5s;
-        font-family: 'chubby';
-    }
-    
-    #about-header {
-        color: rgba(65, 164, 249, 1);
-        font-family: 'chubby';
-    }
-    
-    #causes-header {
-        color: rgb(90, 216, 90);
-        font-family: 'chubby';
-    }
-    
-    #levels-header {
-        color: rgb(236, 66, 66);
-        font-family: 'chubby';
-    }
-    
-    #levels-header:hover {
-        color: #2c2828;
-    }
     .login-button {
         display: none;
     }
@@ -224,49 +215,19 @@ a {
     .open {
         display: block;
     }
-    .nav-link::after {
-        display: none;
-    }
-    .nav-link:hover::after {
-        display: none;
-    }
-}
-
-#hero-header {
-    color: #7a7a76;
-    font-family: 'chubby';
-}
-
-#hero-header:hover {
-    color: #2c2828;
-    transition: 0.5s;
-}
-
-#about-header {
-    color: rgba(65, 164, 249, 1);
-    font-family: 'chubby';
-}
-
-#causes-header {
-    color: rgb(90, 216, 90);
-    font-family: 'chubby';
-}
-
-#levels-header {
-    color: rgb(236, 66, 66);
-    font-family: 'chubby';
 }
 
 /* Hero Section */
 #hero {
     width: 100%;
-    min-height: 94vh;
+    height: 600px;
     position: relative;
-    padding: 60px 0;
     display: flex;
     align-items: center;
+    justify-content: center;
     
     background: url('https://turinha-static.pkds.it/blog/production/2017/02/11130024/cantigas-de-roda-1.jpg') top center;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
@@ -286,7 +247,7 @@ a {
     position: absolute;
     z-index: 994;
     margin-left: 40px;
-    text-align: left;
+    text-align: center;
     margin-right: 40px;
     background: transparent;
 }
@@ -312,8 +273,10 @@ a {
 }
   
 .hero-text p {
-    margin: 5px 50% 30px 0;
     text-align: justify;
+    text-align: center;
+    margin: 10px;
+    margin-bottom: 28px;
     font-size: 21px;
     font-weight: 400;
     color: #fff;
