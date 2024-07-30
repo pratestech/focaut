@@ -81,10 +81,12 @@ a {
     background: #ffffffec;
 }
 
+.logo img{
+    width: 90px;
+    height: 20px;
+}
+
 .logo a{
-    color: #706868;
-    font-size: 19px;
-    margin: 5px 0;
     text-decoration: none;
 }
 
