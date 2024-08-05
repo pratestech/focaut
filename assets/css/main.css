@@ -1,7 +1,3 @@
-@font-face {
-    font-family: 'chubby';
-    src: url('../font/CHUBBY.TTF') format('truetype');
-}
 
 /*
     RESOLUÇÃO PC ESCOLA: 1920X1080
@@ -25,7 +21,7 @@
 :root {
     --black: #000;
     --white: #fff;
-    --blue: #09014a;
+    --blue: #024379;
     --red: #ce1212;
     --yellow: #ffcf00;
 }
@@ -38,8 +34,8 @@ html {
 /* General */
 body {
     font-family: "Open Sans", sans-serif;
-    color: #37434e;
     overflow-x: hidden;
+    color: #37434e;
 }
 
 h1,
@@ -88,48 +84,54 @@ a {
 
 .logo a{
     text-decoration: none;
+    margin-left: 200px;
 }
 
 .right {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 90px;
+    margin-right: 200px;
 }
 
 .nav-list ul {
     display: flex;
-    justify-content:center;
-    align-items: center;
-    text-align: right;
     list-style: none;
-}
-
-.nav-item:not(:last-child) {
-    margin-right: 50px;
 }
 
 .nav-link {
     text-decoration: none;
     font-size: 20px;
     color: #000000;
-    cursor: pointer;
+    margin-right: 30px;
+    padding-bottom: 4px;
     font-family: 'menuFont';
+    position: relative;
 }
 
-.nav-item a::after {
+.nav-link::after {
     content: "";
+    width: 0%;
+    height: 2px;
+    background: #0187a7;
     position: absolute;
     bottom: 0;
     left: 0;
-    background: #000;
-    height: 2px;
-    width: 0%;
-    transition: .8s ease-in-out;
+    margin-bottom: 4px;
+    transition: 0.7s ease-in-out;
 }
 
-.nav-item a:hover::after {
-    width: 100%;
+.nav-link:hover::after {
+    width: calc(100% + 8px);
+}
+
+.nav-link:hover {
+    color: #0187a7;
+    transition: 0.5s;
+}
+
+.icon {
+    height: 50px;
 }
 
 .login-button button {
@@ -145,7 +147,14 @@ a {
     text-decoration: none;
     color: #fff;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 18px;
+    font-family: poppins, sans-serif;
+    text-transform: uppercase;
+}
+
+.login-button button:hover {
+    transform: scale(1.07);
+    transition: 0.7s;
 }
 
 .mobile-menu-icon {
@@ -171,7 +180,7 @@ a {
     font-family: 'poppins', sans-serif;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1238px) {
     .nav-bar {
         padding: 1.46rem 4rem;
     }
@@ -182,7 +191,7 @@ a {
         display: none;
     }
     .mobile-menu {
-        background: #ffffffdc;
+        background: #000;
         height: 100%;
     }
     .mobile-menu-icon {
@@ -219,18 +228,98 @@ a {
     }
 }
 
+/* Article Section */
+.article {
+    display: flex;
+    background: transparent;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    gap: 150px;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 150px;
+    margin-top: -80px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+svg {
+    position: absolute;
+    z-index: 1;
+    margin-top: -423px;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 35px;
+    width: 300px;
+    height: 400px;
+    padding: 8px;
+    transition: transform .5s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.icon-card {
+    background: linear-gradient(to left top, #0187a7, rgb(50, 224, 187));
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    margin-left: -40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon i {
+    color: #fff;
+    font-size: 30px;
+    text-shadow: 3px 5px 2px rgb(0, 0, 0, .3);
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.top h2 {
+    font-family: 'poppins', sans-serif;
+}
+
+.n1 {
+    text-indent: 15px;
+    font-size: 22px;
+    margin: 14px;
+}
+
 /* Hero Section */
 #hero {
     width: 100%;
-    height: 600px;
+    height: 760px;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     
-    background: url('https://turinha-static.pkds.it/blog/production/2017/02/11130024/cantigas-de-roda-1.jpg') top center;
+    background: url('https://turinha-static.pkds.it/blog/production/2017/02/11130024/cantigas-de-roda-1.jpg') center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 #hero:before {
@@ -245,12 +334,9 @@ a {
 }
 
 .container-hero {
-    padding: 90px 0 40px 0;
-    position: absolute;
-    z-index: 994;
-    margin-left: 40px;
+    position: relative;
+    z-index: 1;
     text-align: center;
-    margin-right: 40px;
     background: transparent;
 }
 
@@ -336,7 +422,7 @@ a {
 }
 
 .container-about {
-    margin: 0 20px 0 20px;
+    margin: 390px 20px 0 20px;
     position: relative;
     z-index: 3;
 }
@@ -450,161 +536,6 @@ a {
     text-align: justify;
     font-size: 20px;
     margin: 20px 8px;
-}
-
-/* Levels */
-#levels {
-    background: rgba(108, 178, 238, 0.712);
-    padding: 60px 0 60px 0;
-}
-
-#levels h1 {
-    font-size: 32px;
-    font-weight: bold;
-    padding: 0 0 18px 0;
-    text-align: center;
-    position: relative;
-    z-index: 10;
-    color: #e4dddd;
-}
-
-#levels h1::before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 100px;
-    height: 3px;
-    background: #e61313;
-    margin-bottom: 9px;
-    margin-left: 685px;
-    bottom: 0;
-}
-
-.container-levels {
-    padding-top: 100px;
-}
-
-.container-levels p {
-    text-align: justify;
-    text-align: center;
-    text-indent: 20px;
-    margin: 0 20px 0 20px;
-    color: #fff;
-    font-size: 19px;
-}
-
-.wave2 {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    height: 1px;
-    margin-top: -60px;
-}
-
-/* Cards */
-#wrapper {
-    width: 100%;
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
-    margin-bottom: 90px;
-    justify-content: center;
-}
-
-.container {
-    height: 400px;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: start;
-}
-
-.card {
-    width: 80px;
-    border-radius: .75rem;
-    background-size: cover;
-    cursor: pointer;
-    overflow: hidden;
-    border-radius: 2rem;
-    margin: 0 10px;
-    display: flex;
-    align-items: flex-end;
-    transition: .6s cubic-bezier(.28,-0.03,0,.99);
-    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
-}
-
-.card > .row {
-    color: rgb(255, 255, 255);
-    background: #0187a7;
-    padding: 8px 0 8px 0;
-    display: flex;
-    flex-wrap: nowrap;
-}
-
-.card > .row > .icon {
-    background: #223;
-    color: white;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 15px;
-}
-
-.card > .row > .description {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    overflow: hidden;
-    height: 89px;
-    width: 520px;
-    opacity: 0;
-    transform: translateY(30px);
-    transition-delay: .3s;
-    transition: all .3s ease;
-}
-
-.card[for="c1"] .description p {
-    color: #ececec;
-}
-
-.card[for="c2"] .description p {
-    color: #ececec;
-}
-
-.card[for="c3"] .description p {
-    color: #ececec;
-}
-
-input {
-    display: none;
-}
-
-input:checked + label {
-    width: 600px;
-}
-
-input:checked + label .description {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-}
-
-.card[for="c1"] {
-    background: url('https://www.ninhosdobrasil.com.br/sites/default/files/styles/standard/public/2021-08/por-que-brincar-e-essencial%281%29.jpg?itok=J4VRWf_g') center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.card[for="c2"] {
-    background: url('https://www.autismoemdia.com.br/wp-content/uploads/2019/11/graus-de-autismo-123.jpg') center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.card[for="c3"] {
-    background: url('https://imom.com.br/wp-content/uploads/elementor/thumbs/lancamento-5-pjasjiab42eh9ud2kznpzggytuvlzqoufsm1atnrko.png') center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 /* Footer */
