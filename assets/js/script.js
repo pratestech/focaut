@@ -31,7 +31,7 @@ function menuShow() {
     document.querySelector('.icon').src = "assets/img/menu-svgrepo-com.svg";
   }else {
     menuMobile.classList.add('open');
-    document.querySelector('.icon').src = "assets/img/close_33dp_E8EAED_FILL0_wght400_GRAD0_opsz40.svg";
+    document.querySelector('.icon').src = "assets/img/icons8-close.svg";
   }
   menuMobile.addEventListener('close')
 }
