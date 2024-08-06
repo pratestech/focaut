@@ -1,3 +1,6 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 /*
     RESOLUÇÃO PC ESCOLA: 1920X1080
@@ -77,14 +80,10 @@ a {
     background: #ffffffec;
 }
 
-.logo img{
+.logo h1{
     width: 90px;
     height: 20px;
-}
-
-.logo a{
-    text-decoration: none;
-    margin-left: 200px;
+    color: #ececec;
 }
 
 .right {
@@ -253,10 +252,14 @@ a {
     }
 }
 
-svg {
+.onda {
+    width: 100%;
+    height: 100px;
     position: absolute;
     z-index: 1;
-    margin-top: -423px;
+    bottom: 0;
+    background: url('/assets/img/onda.png');
+    background-size: 1000px 100px;
 }
 
 .card {
@@ -285,7 +288,7 @@ svg {
     justify-content: center;
 }
 
-.icon i {
+.icon-card i {
     color: #fff;
     font-size: 30px;
     text-shadow: 3px 5px 2px rgb(0, 0, 0, .3);
@@ -303,8 +306,20 @@ svg {
 
 .n1 {
     text-indent: 15px;
-    font-size: 22px;
-    margin: 14px;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.n2 {
+    text-indent: 15px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.n3 {
+    text-indent: 15px;
+    padding: 10px;
+    font-size: 18px;
 }
 
 /* Hero Section */
@@ -342,22 +357,42 @@ svg {
 
 .more-button button {
     font-size: 15px;
-    border: none;
-    width: 100px;
-    padding: 10px 15px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    padding: 9px 35px;
+    letter-spacing: 1px;
+    display: inline-block;
     border-radius: 50px;
-    margin-left: 20px;
     color: #fff;
-    cursor: pointer;
-    background-color: #0187a7;
+    background: transparent;
+    transition: .5s;
+    border: 2px solid #0187a7;
+}
+
+.more-button button:hover {
+    background: #0187a7;
 }
   
 .hero-text h1 {
-    margin: 0 0 15px 20px;
-    color: #0187a7;
-    font-size: 64px;
+    margin: 0;
+    font-size: 48px;
     font-weight: 700;
-    font-family: 'Poppins', sans-serif;
+    line-height: 56px;
+    color: #fff;
+    font-family: "Raleway", sans-serif;
+}
+
+.hero-text h1::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #EEE;
+    margin-top: -27px;
+    bottom: 0;
+    top: 50%;
+    left: 50%;transform: translate(-50%, -50%);
 }
   
 .hero-text p {
@@ -367,7 +402,7 @@ svg {
     margin-bottom: 28px;
     font-size: 21px;
     font-weight: 400;
-    color: #fff;
+    color: #EEE;
 }
   
 @media (max-width: 768px) {
