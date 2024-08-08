@@ -309,16 +309,14 @@ a {
 /* Hero Section */
 #hero {
     width: 100%;
-    height: 870px;
+    height: 900px;
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
     
-    background: url('https://turinha-static.pkds.it/blog/production/2017/02/11130024/cantigas-de-roda-1.jpg') center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: url('https://turinha-static.pkds.it/blog/production/2017/02/11130024/cantigas-de-roda-1.jpg') center no-repeat;
     background-attachment: fixed;
+    background-size: cover;
 }
 
 #hero:before {
@@ -335,26 +333,15 @@ a {
 .container-hero {
     position: relative;
     z-index: 1;
-    text-align: center;
+    text-align: left;
     background: transparent;
+
+    display: flex;
+    align-items: center;
 }
 
-.more-button button {
-    font-size: 15px;
-    font-family: "Raleway", sans-serif;
-    font-weight: 500;
-    padding: 9px 35px;
-    letter-spacing: 1px;
-    display: inline-block;
-    border-radius: 50px;
-    color: #fff;
-    background: transparent;
-    transition: .5s;
-    border: 2px solid #0187a7;
-}
-
-.more-button button:hover {
-    background: #0187a7;
+.hero-text {
+    margin-left: 90px;
 }
   
 .hero-text h1 {
@@ -367,12 +354,22 @@ a {
 }
   
 .hero-text p {
-    text-align: justify;
-    text-align: center;
     font-size: 19px;
     font-weight: 400;
     margin: 24px;
+    margin-left: 0;
+    width: 600px;
     color: #EEE;
+}
+
+.gp button {
+    background: url('/assets/img/googlePlay-removebg-preview.png') center no-repeat;
+    background-size: cover;
+
+    border: none;
+    cursor: pointer;
+    height: 90px;
+    width: 200px;
 }
   
 @media (max-width: 768px) {
@@ -391,10 +388,6 @@ a {
     .hero-text h1 {
       font-size: 3rem;
       margin-bottom: 20px;
-    }
-    .more-button {
-        margin: 20px 0;
-        cursor: pointer;
     }
 }
 
@@ -426,16 +419,23 @@ a {
 }
 
 .container-about {
-    margin: 0 20px 0 20px;
-    position: relative;
-    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+}
+
+.container-about img {
+    width: 650px;
 }
 
 .container-about p {
-    padding-top: 26px;
+    text-align: justify;
     text-indent: 20px;
     font-size: 20px;
-    text-align: justify;
+
+    padding-top: 26px;
+    width: 700px;
 }
 
 .container-about ul {
@@ -452,14 +452,6 @@ a {
 
 .what {
     margin-bottom: 50px;
-}
-
-.wave1 {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    height: 1px;
-    margin-bottom: 290px;
 }
 
 /* Causes */
